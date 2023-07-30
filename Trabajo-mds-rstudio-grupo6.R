@@ -89,3 +89,7 @@ summary(ds) # resumen
 names(ds) # nombre de los campos
 
 #-------------- 5. Verificaciòn de datos perdidos--------------#
+library(DataExplorer)
+plot_missing(ds)
+
+
