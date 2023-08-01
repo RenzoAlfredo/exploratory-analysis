@@ -86,11 +86,14 @@ ds <- read.spss("BASE MODELO SEGMENTACION Y PREDICCIÓN - CAJA - GRUPO 1.sav",
 str(ds) # estructura
 head(ds) # top 6 de filas
 summary(ds) # resumen
-summary(ds) # resumen
 names(ds) # nombre de los campos
-names(ds) # nombre de los campos
-
+dim(ds) # mostrar la dimensiòn de los datos
+dplyr::glimpse(ds)
 
 #-------------- 5. Verificaciòn de datos perdidos--------------#
 library(DataExplorer)
 plot_missing(ds)
+
+
+
+
