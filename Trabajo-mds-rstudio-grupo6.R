@@ -107,15 +107,25 @@ plot_missing(ds)
 par(mfrow = c(2,5))
 hist(ds$Edad, main = "Edad del cliente", col = "orange")
 hist(ds$CantCred, main = "Cantidad de Crèdito", col = "orange")
-hist(ds$Desem, main = "Desembolso", col = "orange")
-hist(ds$SalVigSol, main = "Saldo Vigente", col = "orange")
-hist(ds$Monto_Tasación, main = "Monto Tasaciòn", col = "orange")
+hist(ds$Desem, main = "Desembolso", col = "orange") # posibles datos atìpicos
+hist(ds$SalVigSol, main = "Saldo Vigente", col = "orange") # posibles datos atìpicos
+hist(ds$Monto_Tasación, main = "Monto Tasaciòn", col = "orange") # posibles datos atìpicos
 hist(ds$DiasEfec, main = "Dias Efect", col = "orange")
 hist(ds$MaxDeuda, main = "Max Deuda", col = "orange")
 hist(ds$MaxDiasAtra, main = "Max Dìas de Atraso", col = "orange") 
-hist(ds$MaxGramOro, main = "Max Gramos de Oro", col = "orange")
+hist(ds$MaxGramOro, main = "Max Gramos de Oro", col = "orange") # posibles datos atìpicos
 hist(ds$AntiDias, main = "Anti Dìas", col = "orange")
 par(mfrow = c(1,1))
+ 
+boxplot(ds$Desem, main = "Desembolso")
+boxplot(ds$SalVigSol, main = "Saldo Vigente")
+boxplot(ds$Monto_Tasación, main = "Monto Tasaciòn")
+boxplot(ds$MaxGramOro, main = "Max Gramos de Oro")
+
+par(mfrow = c(1,2))
+boxplot(ds$Edad, main = "Edad del cliente")
+stripchart(ds$Edad, main = "Edad")
+
 
 par(mfrow = c(1,2))
 hist(ds$FlagAtra, main = "FlagAtra", col = "orange") 
