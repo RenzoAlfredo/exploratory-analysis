@@ -164,6 +164,7 @@ ds <- read.spss("BASE MODELO SEGMENTACION Y PREDICCIÓN - CAJA - GRUPO 1.sav",
 #-------------- 4. Browsing de la informaciòn--------------#
 str(ds) # estructura
 head(ds) # top 6 de filas
+head(ds, 10)
 summary(ds) # resumen
 names(ds) # nombre de los campos
 dim(ds) # mostrar la dimensiòn de los datos
